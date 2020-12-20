@@ -1,1 +1,85 @@
-
+h1 {
+  margin: 40px 30px 0px 30px;
+  font-family: "Oxygen", sans-serif;
+  color: rgb(70, 78, 83);
+  text-align: center;
+}
+h1 li {
+  font-size: 30px;
+}
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin: 0px 0px 20px 0px;
+  font-family: "Oxygen", sans-serif;
+  color: rgb(70, 78, 83);
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  text-transform: uppercase;
+}
+h3 {
+  text-align: center;
+  color: rgb(70, 78, 83);
+  margin: 25px;
+  font-size: 25px;
+}
+hr {
+  margin-bottom: 23px;
+}
+ul {
+  padding: 0;
+}
+li {
+  text-align: center;
+  list-style: none;
+  font-size: 20px;
+}
+h5 {
+  font-size: 22px;
+  font-family: "Advent Pro", sans-serif;
+}
+h1 .weather-icon {
+  font-size: 100px;
+}
+form {
+  text-align: center;
+  margin: 30px auto;
+  font-size: 25px;
+  font-family: "Advent Pro", sans-serif;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+h1 .row .col {
+  margin: 20px auto;
+}
+.row {
+  text-align: center;
+}
+.col {
+  padding: 0;
+}
+.col-2 {
+  padding: 0;
+}
+.card .weather-icon {
+  font-size: 25px;
+}
+.card {
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: rgb(70, 78, 83);
+  font-family: "Advent Pro", sans-serif;
+}
+.card-body {
+  padding: 5px;
+}
+.go-icon {
+  background-color: #c3cfe2;
+}
+.app {
+  background-image: url(pexels-pixabay-158827.jpg);
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+.container {
+  max-width: 800px;
+}
