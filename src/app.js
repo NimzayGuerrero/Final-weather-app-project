@@ -32,7 +32,20 @@ function displayTemperature (response){
     currentIcon.setAttribute("alt",`${response.data.weather[0].description}`);
 
 }
-let city = "Caracas"
-let apiKey = "57c364089b821cdc467408c870253e67";
-let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiURL).then(displayTemperature);
+
+function search(city){
+    let apiKey = "57c364089b821cdc467408c870253e67";
+    let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiURL).then(displayTemperature);
+}
+
+function handelSubmit(event){
+    event.preventDefault();
+    let cityInput = document.querySelector("#city-input");
+    search(cityInput.value);
+}
+
+search("Caracas");
+
+let form = document.querySelector("#search-city");
+form.addEventListener("submit", handelSubmit);
