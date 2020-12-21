@@ -83,6 +83,16 @@ h1 .row .col {
 .container {
   max-width: 800px;
 }
+#current-temp {
+  font-weight: bold;
+}
 #description {
   font-weight: bold;
+}
+#current-temp .active {
+  color: rgb(70, 78, 83);
+  cursor: default;
+}
+#current-temp .active:hover {
+  text-decoration: none;
 }

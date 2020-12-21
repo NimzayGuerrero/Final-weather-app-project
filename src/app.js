@@ -30,7 +30,7 @@ function displayTemperature (response){
     let currentIcon = document.querySelector("#icon");
     currentIcon.setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
     currentIcon.setAttribute("alt",`${response.data.weather[0].description}`);
-
+    celsiusTemp = response.data.main.temp;
 }
 
 function search(city){
@@ -45,7 +45,33 @@ function handelSubmit(event){
     search(cityInput.value);
 }
 
-search("Caracas");
+function displayFtemp (event) {
+    event.preventDefault();
+    let currentTemp = document.querySelector("#temp-now");
+    celsiusLink.classList.remove("active");
+    farenheitLink.classList.add("active");
+    let farenheitTemp = (celsiusTemp * 9) / 5 + 32;
+    currentTemp.innerHTML = Math.round(farenheitTemp);
+}
+
+function displayCtemp (event) {
+    event.preventDefault();
+    let currentTemp = document.querySelector("#temp-now");
+    celsiusLink.classList.add("active");
+    farenheitLink.classList.remove("active");
+    currentTemp.innerHTML = Math.round(celsiusTemp);
+}
+
+let celsiusTemp = null
 
 let form = document.querySelector("#search-city");
 form.addEventListener("submit", handelSubmit);
+
+let farenheitLink = document.querySelector ("#farenheit-link");
+farenheitLink.addEventListener("click", displayFtemp);
+
+let celsiusLink = document.querySelector ("#celsius-link");
+celsiusLink.addEventListener("click", displayCtemp);
+
+search("Caracas");
+
