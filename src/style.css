@@ -5,7 +5,7 @@ h1 {
   text-align: center;
 }
 h1 li {
-  font-size: 30px;
+  font-size: 28px;
 }
 h2 {
   text-align: center;
@@ -32,6 +32,7 @@ li {
   text-align: center;
   list-style: none;
   font-size: 20px;
+  text-transform: capitalize;
 }
 h5 {
   font-size: 22px;
@@ -82,4 +83,7 @@ h1 .row .col {
 }
 .container {
   max-width: 800px;
+}
+#description {
+  font-weight: bold;
 }
